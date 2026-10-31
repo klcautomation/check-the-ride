@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Partner packet · Check the Ride · KLC Automation</title>
+<style>
+  :root{--ivory:#f8f3e8;--ink:#111;--gold:#b8963e;--muted:#4a4740}
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--ivory);color:var(--ink)}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;line-height:1.5;
+       padding:max(24px,env(safe-area-inset-top)) 20px max(28px,env(safe-area-inset-bottom));}
+  main{max-width:960px;margin:0 auto;text-align:center}
+  .brand{font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin:0 0 18px}
+  h1{font-family:Georgia,"Times New Roman",Times,serif;font-weight:400;font-size:clamp(1.9rem,7vw,3.2rem);line-height:1.12;margin:0 auto;max-width:18ch}
+  h2{font-family:Georgia,"Times New Roman",Times,serif;font-weight:400;font-size:1.5rem;margin:34px 0 10px}
+  .rule{width:72px;height:1px;background:var(--gold);border:0;margin:22px auto}
+  .sub{font-family:Georgia,"Times New Roman",Times,serif;font-size:clamp(1.02rem,3.8vw,1.2rem);margin:0 auto 26px;max-width:40ch}
+  .frame{margin:0 auto;background:#000;border-radius:6px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.18)}
+  .frame video{display:block;width:100%;height:auto;background:#000}
+  .v-tall{max-width:420px}.v-wide{max-width:960px}
+  .alt{font-size:.9rem;color:var(--muted);margin:10px 0 0}
+  .alt a{color:var(--ink)}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin:8px auto 0;max-width:760px;text-align:left}
+  .card{background:#fff;border:1px solid #e3dccb;border-radius:8px;padding:18px 20px}
+  .card h3{margin:0 0 6px;font-size:1.05rem}
+  .card p{margin:0 0 12px;color:var(--muted);font-size:.95rem}
+  .btn{display:inline-block;background:var(--ink);color:#fff;text-decoration:none;padding:10px 16px;border-radius:6px;font-weight:600;font-size:.95rem}
+  .tag{display:inline-block;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--ink);padding:2px 8px;margin-bottom:8px}
+  .disclaimer{max-width:640px;margin:30px auto 0;font-size:.9rem;color:var(--muted)}
+  footer{margin-top:36px;font-size:.8rem;color:var(--muted)}
+  footer .rule{margin:0 auto 14px;width:40px}
+</style>
+</head>
+<body>
+<main>
+  <p class="brand">KLC Automation · Partner packet</p>
+  <h1>Before the ride, check the ride.</h1>
+  <hr class="rule">
+  <p class="sub">Everything you need to show Check the Ride to hotels, venues, wedding planners and event folks.</p>
+
+  <div id="frame" class="frame v-tall">
+    <video id="demo" controls playsinline preload="metadata" poster="poster-vertical.jpg">
+      <source src="demo-vertical.mp4" type="video/mp4">
+      Your browser can't play this video. <a href="demo-vertical.mp4">Download it here.</a>
+    </video>
+  </div>
+  <p class="alt">Demo video, 80 seconds. The report shown is a fictional sample with example data.<br>
+    Download: <a href="demo-vertical.mp4" download>phone version</a> · <a href="demo.mp4" download>widescreen version</a></p>
+
+  <h2>Print and pitch</h2>
+  <div class="cards">
+    <div class="card">
+      <span class="tag">Leave behind</span>
+      <h3>One-pager for hotels and planners</h3>
+      <p>Prints in black and white. QR code to the customer video, plus a "Referred by" line for your name.</p>
+      <a class="btn" href="one-pager.pdf">Open the one-pager (PDF)</a>
+    </div>
+    <div class="card">
+      <span class="tag">Partners only</span>
+      <h3>Partner cheat sheet</h3>
+      <p>The pitch, who to target, three objection answers, pricing, your split and the ground rules. Don't leave this one behind.</p>
+      <a class="btn" href="cheat-sheet.pdf">Open the cheat sheet (PDF)</a>
+    </div>
+  </div>
+  <p class="alt">Customer link to share: <a href="../">klcautomation.github.io/check-the-ride</a></p>
+
+  <p class="disclaimer">Not a safety rating or endorsement; does not replace FMCSA (or KYTC/FMCSA for KY, Indiana DOR/FMCSA for IN intrastate); verify insurance directly. Informational only, not legal or insurance advice.</p>
+  <footer><hr class="rule">© 2026 KLC Automation LLC.</footer>
+</main>
+<script>
+(function(){
+  var v=document.getElementById('demo'),f=document.getElementById('frame');
+  var mq=window.matchMedia('(min-width: 768px) and (orientation: landscape)');
+  var cur='';
+  function pick(){
+    var wide=mq.matches, src=wide?'demo.mp4':'demo-vertical.mp4';
+    if(src===cur) return;
+    var playing=!v.paused, t=v.currentTime||0;
+    cur=src; f.className='frame '+(wide?'v-wide':'v-tall');
+    v.poster=wide?'poster.jpg':'poster-vertical.jpg';
+    v.querySelector('source').src=src; v.load();
+    if(t>0){v.addEventListener('loadedmetadata',function h(){v.currentTime=t;if(playing)v.play();v.removeEventListener('loadedmetadata',h);});}
+  }
+  pick();
+  if(mq.addEventListener) mq.addEventListener('change',pick); else if(mq.addListener) mq.addListener(pick);
+})();
+</script>
+</body>
+</html>
