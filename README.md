@@ -17,6 +17,13 @@ and never rename this repo or the `klcautomation` account.
 | https://klcautomation.github.io/check-the-ride/partners/one-pager.pdf | customer leave-behind (QR points to the root URL) |
 | https://klcautomation.github.io/check-the-ride/partners/cheat-sheet.pdf | partner-only cheat sheet |
 
+| https://klcautomation.github.io/check-the-ride/checkout/ | `checkout/index.html` (lists all four packages) |
+| https://klcautomation.github.io/check-the-ride/report/ | `report/index.html` → existing $49 Stripe link |
+| https://klcautomation.github.io/check-the-ride/event/ | `event/index.html` → existing $129 Stripe link |
+| https://klcautomation.github.io/check-the-ride/10pack/ | `10pack/index.html` → existing $349 Stripe link |
+| https://klcautomation.github.io/check-the-ride/operator/ | `operator/index.html` → existing $99 Stripe link |
+
+
 Rules:
 - Keep the repo small: phone-size files only (each well under 25 MB; GitHub's hard limit is 100 MB). No raw masters.
 - Pages serves from `main` at `/`. Don't archive the repo, make it private, or change the Pages source.
