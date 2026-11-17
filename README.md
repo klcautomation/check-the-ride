@@ -1,5 +1,7 @@
 # Check the Ride · KLC Automation (GitHub Pages)
 
+Public product name (as of November 16, 2026): **CurbCrown Report™**, tagline “a plain-English records review.” The repo name and public URL stay `check-the-ride`. Do not rename this repo or the paths below.
+
 ## DO NOT RENAME OR DELETE - partner links live here
 
 Referral partners have these links printed and saved. They must keep working for years.
