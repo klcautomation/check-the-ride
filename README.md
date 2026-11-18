@@ -10,7 +10,7 @@ and never rename this repo or the `klcautomation` account.
 
 | Public URL | File |
 |---|---|
-| https://klcautomation.github.io/check-the-ride/ | `index.html`, `ctr-16x9.mp4`, `ctr-9x16.mp4`, `poster.jpg`, `poster-9x16.jpg` |
+| https://klcautomation.github.io/check-the-ride/ | `index.html`, `sample-page1.png` (videos and posters remain at their existing URLs) |
 | https://klcautomation.github.io/check-the-ride/partners/ | `partners/index.html` |
 | https://klcautomation.github.io/check-the-ride/partners/demo.mp4 | widescreen demo |
 | https://klcautomation.github.io/check-the-ride/partners/demo-vertical.mp4 | phone demo |
