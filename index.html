@@ -42,6 +42,14 @@
     padding:14px 18px;font-size:1.05rem;font-family:inherit;width:100%;text-align:center;
     text-decoration:none;line-height:1.2}
   .btn:hover{background:#222}
+  .check{max-width:34em}
+  .check .lead{max-width:40ch}
+  .check ul{list-style:none;margin:18px auto 0;padding:0;text-align:left}
+  .check li{position:relative;padding:9px 0 9px 22px;border-top:1px solid var(--line);font-size:1rem}
+  .check li:last-child{border-bottom:1px solid var(--line)}
+  .check li::before{content:"";position:absolute;left:4px;top:1.15em;width:6px;height:6px;border-radius:50%;background:var(--gold)}
+  .check .fine{max-width:44ch}
+  .check .grp{margin:20px auto 0;max-width:40ch;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;font-weight:700;color:var(--muted)}
   .request-wrap{max-width:360px;margin:0 auto}
   .fine{font-size:.86rem;color:var(--muted);margin:12px auto 0;max-width:36ch}
   .pack-line{margin:14px auto 0;font-size:.95rem}
@@ -69,9 +77,27 @@
     <h1>Know who you’re booking before the big night</h1>
 
     <figure class="sample">
-      <img src="sample-page1.png" width="935" height="1210" alt="Sample CurbCrown Report page 1 for a fictional company with illustrative data">
+      <img src="sample-page1.png" width="935" height="1210" alt="Sample CurbCrown Report page 1 for a fictional company with illustrative data, including the public reputation and records summary">
       <figcaption class="sample-label">Sample report page — fictional company, illustrative data.</figcaption>
     </figure>
+
+    <section class="check" aria-labelledby="what-we-check">
+      <h2 id="what-we-check">What we check</h2>
+      <p class="lead">Each report lists what we checked, with the source and the date checked for each item.</p>
+      <p class="grp">Checked automatically from FMCSA records</p>
+      <ul>
+        <li>Operating authority and insurance filing history, including any gaps between filings (carriers with an MC or MX docket)</li>
+        <li>Authority that was revoked and later reinstated</li>
+        <li>Other USDOT numbers that share an address, phone number or email domain (shared details can be innocent)</li>
+        <li>Owner and officer names as FMCSA lists them</li>
+      </ul>
+      <p class="grp">Checked by hand, once per order</p>
+      <ul>
+        <li>BBB: complaint and review counts. Yelp: review counts</li>
+        <li>Indiana court records: a name-and-location search (Indiana operators only)</li>
+      </ul>
+      <p class="fine">News and state attorney general searches are added when we run them for an order. Anything we could not check is listed as not checked. Each flag is a question to ask the operator, not a conclusion.</p>
+    </section>
 
     <section aria-labelledby="first-check">
       <h2 id="first-check">First check free for planners and venues</h2>
